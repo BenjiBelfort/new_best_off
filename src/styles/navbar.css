@@ -66,6 +66,10 @@ header {
 
 @media(max-width:768px) {
 
+  .logo img {
+    display: none;
+  }
+
   .hamburger {
       display: block;
   }
@@ -98,7 +102,6 @@ header {
       text-align: center;
       transition: 0.3s;
       opacity: 0;
-
   }
 
   .nav-item {

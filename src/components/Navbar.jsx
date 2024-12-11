@@ -25,8 +25,8 @@ const Navbar = () => {
       setShowScrollToTop(false);
     }
 
-    closeMenu(); // Ferme le menu lors du scroll
-  }, []); // Pas de dépendances, car closeMenu est constant
+    closeMenu();
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -37,7 +37,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll]); // Ajout de handleScroll comme dépendance
+  }, [handleScroll]);
 
   return (
     <>
