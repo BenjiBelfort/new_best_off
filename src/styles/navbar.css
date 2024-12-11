@@ -1,0 +1,148 @@
+header {
+  width: 100%;
+  background-color: #0c120c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo h1 {
+  color: #ecebf3;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  color: #ecebf3;
+  font-size: 1rem;
+}
+
+.nav-menu ul {
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ecebf3;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media(max-width:768px) {
+
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      /* top: 70px; */
+      gap : 0;
+      flex-direction: column;
+      background-color: #0c120c;
+      width: 100%;
+
+      justify-content: space-around;
+      height: 100vh;
+
+      text-align: center;
+      transition: 0.3s;
+      opacity: 0;
+
+  }
+
+  .nav-item {
+      margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+      top: 0;
+  }
+}
+
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  /* Animation properties */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Reset motion */
+}
+
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
