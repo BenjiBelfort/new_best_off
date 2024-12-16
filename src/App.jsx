@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
-import PastEvents from "./pages/PastEvents";
+import PastEvents from "./components/PastEvents";
 import EventDetail from "./pages/EventDetail";
 
 import Navbar from "./components/Navbar";

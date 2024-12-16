@@ -57,3 +57,12 @@ body, html{
 }
 
 /* **************** END OF RESET **************** */
+
+h1, h2, h3 {
+    font-family: "Roboto", sans-serif;
+}
+
+p, a {
+    font-family: "Nunito", sans-serif;
+}
+

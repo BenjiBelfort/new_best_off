@@ -64,14 +64,10 @@ header {
   cursor: pointer;
 }
 
-@media(max-width:768px) {
-
-  .logo img {
-    display: none;
-  }
-
+@media(max-width: 1080px) {
   .hamburger {
       display: block;
+      z-index: 1000;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -102,6 +98,7 @@ header {
       text-align: center;
       transition: 0.3s;
       opacity: 0;
+      z-index: 999;
   }
 
   .nav-item {
@@ -110,11 +107,15 @@ header {
 
   .nav-menu.active {
     opacity: 1;
-      top: 0;
+    top: 0;
   }
 }
 
-
+@media(max-width: 500px) {
+  .logo img {
+    display: none;
+  }
+}
 
 .scroll-to-top {
   position: fixed;
@@ -124,14 +125,15 @@ header {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  z-index: 998;
 
   /* Animation properties */
   opacity: 0;

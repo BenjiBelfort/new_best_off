@@ -42,6 +42,13 @@
         "title": "Événement 3",
         "date": "13 février 2020",
         "description": "Description de l'événement 3"
-    }
-  ]
+    },
+    {
+      "id": "odyssee",
+      "title": "Odyssée du Cirque",
+      "date": "27 janvier 2019",
+      "description": "Cirque en musique avec Best Off'",
+      "photo_cover": "/images/events/odyssee/affiche.jpg"
+  }
+]
   
